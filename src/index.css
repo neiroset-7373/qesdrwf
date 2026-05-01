@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f0f9ff;
+  overflow-x: hidden;
+}
+
+button {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.04);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59,130,246,0.25);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59,130,246,0.4);
+}
+
+/* Prevent blue tap highlight on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth transitions globally */
+button {
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+/* Glass morphism helpers */
+.glass {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
